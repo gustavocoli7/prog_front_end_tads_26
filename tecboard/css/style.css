@@ -1,21 +1,29 @@
-/* Reset */
+/* Fontes */
 @font-face {
     font-family: "poppins";
-    src: url('../fonts/Poppins-Bold.ttf')   format('truetype');
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
- }
- @font-face {
+}
+
+@font-face {
     font-family: "roboto";
     src: url('../fonts/Roboto-Bold.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
- }
-    font-family: 'Impact';
-    src: url('../fonts/impact.ttf') format('truetype');
+}
 
+@font-face {
+    font-family: "impact";
+    src: url('../fonts/impact.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -26,10 +34,15 @@ body {
     background-color: hsl(165, 45%, 15%);
     color: #FFF;
 }
-
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 75px 360px 0;
+}
 header img {
     display: block;
-    margin: 75px 0 0 360px;
+   
 }
 
 h1 {
@@ -66,9 +79,9 @@ a {
     margin: 40px auto;
 }
 
-a:hover{
+a:hover {
     background-color: #B233E8;
-    border: 2px solid #FFF;   
+    border: 2px solid #FFF;
 }
 
 section img {
@@ -77,14 +90,15 @@ section img {
     width: 792px;
     height: 446px;
 }
+
+/* Tablet */
 @media (max-width: 768px) {
     header img {
         margin: 65px 0 0 0;
-       
     }
+
     body {
         background-color: hsl(0, 0%, 0%);
-        color: #FFF;
     }
 
     h1 {
@@ -110,14 +124,15 @@ section img {
         height: auto;
     }
 }
+
+/* Mobile */
 @media (max-width: 375px) {
     header img {
         margin: 32px 0 0 16px;
-       
     }
+
     body {
         background-color: hsl(330, 81%, 14%);
-        color: #FFF;
     }
 
     h1 {
@@ -143,14 +158,22 @@ section img {
         height: 230px;
     }
 }
+
+/* Telas muito pequenas */
 @media (max-width: 275px) {
-    header img {
-        margin: 32px 0 0 16px;
-       
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 75px 0 0;
     }
+
+    header img {
+        display: block;
+    }
+
     body {
         background-color: hsl(330, 6%, 60%);
-        color: #FFF;
     }
 
     h1 {
@@ -161,11 +184,11 @@ section img {
     p {
         max-width: 646px;
         font-size: 20px;
-        width: 340px;
+        width: 90%;
     }
 
     a {
-        width: 251px;
+        width: 80%;
         height: 50px;
         line-height: 50px;
         font-size: 20px;
